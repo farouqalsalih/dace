@@ -21,10 +21,8 @@ pub fn connect_to_db() -> mysql::PooledConn {
         username, password, endpoint, port, name
     );
 
-    let opts = Opts::from_url(&url)
-        .expect("Failed to parse MySQL URL");
+    let opts = Opts::from_url(&url).expect("Failed to parse MySQL URL");
 
-    
     let mysql_pool = mysql::Pool::new(opts).expect("Failed to create a MySQL Pool");
 
     mysql_pool

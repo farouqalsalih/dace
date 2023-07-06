@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS entries (
     program_name VARCHAR(100) NOT NULL,
     lru_type VARCHAR(25) NOT NULL,
     argdata VARCHAR(150) NOT NULL,
-    time_elapsed FLOAT NOT NULL,
+    time_elapsed FLOAT DEFAULT NULL,
     trace_csv_link VARCHAR(150) NOT NULL,
     hist_rd_csv_link VARCHAR(150) NOT NULL,
     hist_ri_csv_link VARCHAR(150) NOT NULL,
