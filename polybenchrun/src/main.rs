@@ -31,14 +31,14 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let skip = &args[6]; //typically should be no
     let data_collection = &args[7]; //choose both
 
-    // let mut conn = aws_utilities::rds::connect_to_db();
+    let mut conn = aws_utilities::rds::connect_to_db();
 
-    // if skip != "yes" {
-    //     if aws_utilities::rds::entry_exists(&mut conn, t_mode, lru_mode, argdata).await? {
-    //         println!("Entry already exists. Aborting.");
-    //         return Ok(());
-    //     }
-    // }
+    if skip != "yes" {
+        if aws_utilities::rds::entry_exists(&mut conn, t_mode, lru_mode, argdata).await? {
+            println!("Entry already exists. Aborting.");
+            return Ok(());
+        }
+    }
 
     let split: Vec<&str> = argdata.split(',').collect();
 
@@ -253,27 +253,27 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         handle.await??; // Use '?' if the functions return Result<_, _>
     }
 
-    // aws_utilities::rds::save_entry(
-    //     &mut conn,
-    //     (
-    //         t_mode,
-    //         lru_mode,
-    //         argdata,
-    //         &duration_to_string(time_elapsed),
-    //         &trace_path_csv,
-    //         &hist_rd_path_csv,
-    //         &hist_ri_path_csv,
-    //         &dist_rd_path_csv,
-    //         &dist_ri_path_csv,
-    //         &trace_path_json,
-    //         &hist_rd_path_json,
-    //         &hist_ri_path_json,
-    //         &dist_rd_path_json,
-    //         &dist_ri_path_json,
-    //         hash_code,
-    //         creator,
-    //     ),
-    // )?;
+    aws_utilities::rds::save_entry(
+        &mut conn,
+        (
+            t_mode,
+            lru_mode,
+            argdata,
+            &duration_to_string(time_elapsed),
+            &trace_path_csv,
+            &hist_rd_path_csv,
+            &hist_ri_path_csv,
+            &dist_rd_path_csv,
+            &dist_ri_path_csv,
+            &trace_path_json,
+            &hist_rd_path_json,
+            &hist_ri_path_json,
+            &dist_rd_path_json,
+            &dist_ri_path_json,
+            hash_code,
+            creator,
+        ),
+    )?;
 
     Ok(())
 }
