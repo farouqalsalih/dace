@@ -1,6 +1,8 @@
 use dace_tests::matmul;
 use dace_tests::polybench::{
-    _2mm, _3mm, cholesky, gemm, gramschmidt_trace, lu, mvt, syr2d, syrk, trisolv, trmm_trace,
+    _2mm, _3mm, cholesky, gemm, gramschmidt_trace, lu, mvt, syr2d, syrk, trisolv, 
+    trmm_trace, heat_3d, convolution_2d, symm, stencil, seidel_2d, ludcmp, nussinov, 
+    jacobi_1d, jacobi_2d, gesummv, gemver
 };
 
 use static_rd::trace::trace;
@@ -69,11 +71,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             split[1].parse::<usize>().unwrap(),
         ),
         "gemm" => gemm(split[0].parse::<usize>().unwrap()),
-        "cholesky" => cholesky(split[0].parse::<usize>().unwrap()),
-        "gramschmidt_trace" => gramschmidt_trace(
-            split[0].parse::<usize>().unwrap(),
-            split[1].parse::<usize>().unwrap(),
-        ),
         "3mm" => _3mm(
             split[0].parse::<usize>().unwrap(),
             split[1].parse::<usize>().unwrap(),
@@ -87,6 +84,40 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             split[2].parse::<usize>().unwrap(),
             split[3].parse::<usize>().unwrap(),
         ),
+        "cholesky" => cholesky(split[0].parse::<usize>().unwrap()),
+        "gramschmidt_trace" => gramschmidt_trace(
+            split[0].parse::<usize>().unwrap(),
+            split[1].parse::<usize>().unwrap(),
+        ),
+        "heat_3d" => heat_3d(
+            split[0].parse::<usize>().unwrap(),
+            split[1].parse::<usize>().unwrap(),
+        ),
+        "convolution_2d" => convolution_2d(
+            split[0].parse::<usize>().unwrap(),
+            split[1].parse::<usize>().unwrap(),
+        ),
+        "symm" => symm(
+            split[0].parse::<usize>().unwrap(),
+            split[1].parse::<usize>().unwrap(),
+        ),
+        "stencil" => stencil(split[0].parse::<usize>().unwrap()),
+        "seidel_2d" => seidel_2d(
+            split[0].parse::<usize>().unwrap(),
+            split[1].parse::<usize>().unwrap(),
+        ),
+        "ludcmp" => ludcmp(split[0].parse::<usize>().unwrap()),
+        "nussinov" => nussinov(split[0].parse::<usize>().unwrap()),
+        "jacobi_1d" => jacobi_1d(
+            split[0].parse::<usize>().unwrap(),
+            split[1].parse::<usize>().unwrap(),
+        ),
+        "jacobi_2d" => jacobi_2d(
+            split[0].parse::<usize>().unwrap(),
+            split[1].parse::<usize>().unwrap(),
+        ),
+        "gesummv" => gesummv(split[0].parse::<usize>().unwrap()),
+        "gemver" => gemver(split[0].parse::<usize>().unwrap()),
         "matmul" => matmul(split[0].parse::<usize>().unwrap()),
         _ => matmul(split[0].parse::<usize>().unwrap()),
     };
