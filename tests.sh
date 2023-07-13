@@ -1,15 +1,124 @@
-nohup cargo run --release Olken cholesky falsalih@u.rochester.edu 1 1024 no both &
-nohup cargo run --release Olken cholesky falsalih@u.rochester.edu 1 256 no both &
-nohup cargo run --release Olken cholesky falsalih@u.rochester.edu 1 128 no both &
-nohup cargo run --release Olken cholesky falsalih@u.rochester.edu 1 512 no both &
-nohup cargo run --release Olken lu falsalih@u.rochester.edu 1 100 no both &
-nohup cargo run --release Olken lu falsalih@u.rochester.edu 1 200 no both &
-nohup cargo run --release Olken gramschmidt_trace falsalih@u.rochester.edu 1 1024,1024 no both &
-nohup cargo run --release Olken gramschmidt_trace falsalih@u.rochester.edu 1 512,512 no both &
-nohup cargo run --release Olken gramschmidt_trace falsalih@u.rochester.edu 1 256,256 no both &
-nohup cargo run --release Olken 2mm falsalih@u.rochester.edu 1 1024,1024,1024,1024 no both &
-nohup cargo run --release Olken 2mm falsalih@u.rochester.edu 1 512,512,512,512 no both &
-nohup cargo run --release Olken 2mm falsalih@u.rochester.edu 1 256,256,256,256 no both &
-nohup cargo run --release Olken 2mm falsalih@u.rochester.edu 1 128,128,128,128 no both &
-nohup cargo run --release Olken gemm falsalih@u.rochester.edu 1 128 no both &
-
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 500 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 505 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 510 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 515 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 520 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 525 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 530 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 535 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 540 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 545 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 550 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 555 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 560 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 565 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 570 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 575 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 580 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 585 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 590 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 595 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 600 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 605 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 610 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 615 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 620 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 625 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 630 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 635 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 640 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 645 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 650 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 655 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 660 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 665 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 670 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 675 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 680 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 685 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 690 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 695 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 700 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 705 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 710 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 715 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 720 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 725 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 730 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 735 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 740 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 745 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 750 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 755 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 760 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 765 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 770 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 775 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 780 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 785 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 790 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 795 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 800 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 805 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 810 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 815 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 820 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 825 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 830 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 835 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 840 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 845 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 850 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 855 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 860 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 865 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 870 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 875 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 880 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 885 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 890 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 895 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 900 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 905 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 910 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 915 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 920 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 925 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 930 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 935 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 940 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 945 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 950 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 955 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 960 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 965 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 970 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 975 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 980 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 985 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 990 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 995 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1000 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1005 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1010 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1015 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1020 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1025 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1030 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1035 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1040 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1045 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1050 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1055 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1060 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1065 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1070 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1075 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1080 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1085 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1090 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1095 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1100 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1105 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1110 no both &
+nohup ./polybenchrun Olken gemm falsalih@u.rochester.edu 3a4683fbd4d3d913a9f03784d910e931d414029d 1115 no both &
