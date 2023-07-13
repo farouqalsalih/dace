@@ -43,7 +43,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let split: Vec<&str> = argdata.split(',').collect();
 
-    println!("here");
+    println!("here after db");
 
     let mut loop_code = match t_mode.as_str() {
         "lu" => lu(split[0].parse::<usize>().unwrap()),
@@ -112,6 +112,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         "matmul" => matmul(split[0].parse::<usize>().unwrap()),
         _ => matmul(split[0].parse::<usize>().unwrap()),
     };
+    println!("here");
 
     // println!("here");
 
@@ -130,6 +131,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         ),
         _ => trace(&mut loop_code, LRUSplay::<usize>::new()),
     };
+    println!("here");
 
     let hist_vec = result.0.to_vec();
 
@@ -151,7 +153,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .expect("Failed to serialize"),
     );
 
-    // println!("here");
+    println!("here");
 
     // let serialized_hist_ri_data = Arc::new(serde_json::to_string(&result.1)?);
     let serialized_dist_rd_data = Arc::new(serde_json::to_string(&result.1)?);
@@ -161,36 +163,36 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let serialized_bucket = "serialized-data-dace";
     let csv_bucket = "csv-data-dace";
 
-    let trace_path_json = Arc::new(format!("trace/{}_{}_{}.json", *t_mode, *lru_mode, *argdata));
+    let trace_path_json = Arc::new(format!("trace/{}_{}_{}_{}.json", *t_mode, *lru_mode, *argdata, *hash_code));
     let hist_rd_path_json = Arc::new(format!(
-        "hist/rd/{}_{}_{}.json",
-        *t_mode, *lru_mode, *argdata
+        "hist/rd/{}_{}_{}_{}.json",
+        *t_mode, *lru_mode, *argdata, *hash_code
     ));
     // let hist_ri_path_json = Arc::new(format!(
     //     "hist/ri/{}_{}_{}.json",
     //     *t_mode, *lru_mode, *argdata
     // ));
     let dist_rd_path_json = Arc::new(format!(
-        "dist/rd/{}_{}_{}.json",
-        *t_mode, *lru_mode, *argdata
+        "dist/rd/{}_{}_{}_{}.json",
+        *t_mode, *lru_mode, *argdata, *hash_code
     ));
     // let dist_ri_path_json = Arc::new(format!(
     //     "dist/ri/{}_{}_{}.json",
     //     *t_mode, *lru_mode, *argdata
     // ));
 
-    let trace_path_csv = Arc::new(format!("trace/{}_{}_{}.csv", *t_mode, *lru_mode, *argdata));
+    let trace_path_csv = Arc::new(format!("trace/{}_{}_{}_{}.csv", *t_mode, *lru_mode, *argdata, *hash_code));
     let hist_rd_path_csv = Arc::new(format!(
-        "hist/rd/{}_{}_{}.csv",
-        *t_mode, *lru_mode, *argdata
+        "hist/rd/{}_{}_{}_{}.csv",
+        *t_mode, *lru_mode, *argdata, *hash_code
     ));
     // let hist_ri_path_csv = Arc::new(format!(
     //     "hist/ri/{}_{}_{}.csv",
     //     *t_mode, *lru_mode, *argdata
     // ));
     let dist_rd_path_csv = Arc::new(format!(
-        "dist/rd/{}_{}_{}.csv",
-        *t_mode, *lru_mode, *argdata
+        "dist/rd/{}_{}_{}_{}.csv",
+        *t_mode, *lru_mode, *argdata, *hash_code
     ));
     // let dist_ri_path_csv = Arc::new(format!(
     //     "dist/ri/{}_{}_{}.csv",
@@ -200,6 +202,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     //serialized: hist ri, hist rd, dist ri, dist rd, trace
 
     // Spawn all async tasks first
+
+    println!("here");
+
     let handle1 = tokio::spawn({
         let serialized_trace_data = Arc::clone(&serialized_trace_data);
         let trace_path_json = Arc::clone(&trace_path_json);
@@ -316,6 +321,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         handle.await??; // Use '?' if the functions return Result<_, _>
     }
 
+    println!("here");
+
+
     let time_elapsed = start.elapsed();
 
     aws_utilities::rds::save_entry(
@@ -343,6 +351,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             creator,
         ),
     )?;
+
+    println!("here");
+
 
     Ok(())
 }

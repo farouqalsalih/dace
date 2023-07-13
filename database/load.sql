@@ -4,7 +4,7 @@ INSERT INTO lru_types (lru_type)
 VALUES 
     ("Stack"),
     ("Vec"),
-    ("Olken")
+    ("Olken"),
     ("Scale");
 
 INSERT INTO programs (program_name)
@@ -12,7 +12,7 @@ VALUES
     ("lu"),
     ("trmm_trace"),
     ("mvt"),
-    ("trisolve"),
+    ("trisolv"),
     ("syrk"),
     ("syr2d"),
     ("gemm"),
@@ -33,3 +33,10 @@ VALUES
     ("gemver"),
     ("matmul");
 
+INSERT INTO user_requests (email, user_name)
+VALUES
+    ("falsalih@u.rochester.edu", "falsalih");
+
+INSERT INTO users (user_name, email, access_key)
+VALUES
+    ("falsalih", "falsalih@u.rochester.edu", "1");

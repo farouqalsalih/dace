@@ -365,11 +365,11 @@ pub fn _2mm(NI: usize, NJ: usize, NK: usize, NL: usize) -> Rc<Node> {
     let mut s_ref_b = Node::new_ref("b", vec![NK, NJ], |ijk| {
         vec![ijk[2] as usize, ijk[1] as usize]
     });
-    let mut s_ref_c = Node::new_ref("c", vec![NL, NJ], |ijk| {
-        vec![ijk[3] as usize, ijk[1] as usize]
+    let mut s_ref_c = Node::new_ref("c", vec![NJ, NL], |ijk| {
+        vec![ijk[2] as usize, ijk[1] as usize]
     });
     let mut s_ref_d = Node::new_ref("d", vec![NI, NL], |ijk| {
-        vec![ijk[0] as usize, ijk[3] as usize]
+        vec![ijk[0] as usize, ijk[1] as usize]
     });
 
     let mut knk_loop_ref = Node::new_single_loop("k", 0, NK as i32);
@@ -379,6 +379,7 @@ pub fn _2mm(NI: usize, NJ: usize, NK: usize, NL: usize) -> Rc<Node> {
     Node::extend_loop_body(&mut knk_loop_ref, &mut s_ref_tmp);
 
     let mut jnj_loop_ref = Node::new_single_loop("j", 0, NJ as i32);
+    Node::extend_loop_body(&mut jnj_loop_ref, &mut s_ref_tmp);
     Node::extend_loop_body(&mut knk_loop_ref, &mut s_ref_tmp);
     Node::extend_loop_body(&mut knk_loop_ref, &mut knk_loop_ref_clone);
 
