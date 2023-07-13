@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS entries (
     lru_type VARCHAR(25) NOT NULL,
     argdata VARCHAR(150) NOT NULL,
     loop_code_hash VARCHAR(150) NOT NULL,
-    time_elapsed FLOAT DEFAULT NULL,
+    time_elapsed INT DEFAULT NULL,
     trace_csv_link VARCHAR(150) NOT NULL,
     hist_rd_csv_link VARCHAR(150) NOT NULL,
     hist_ri_csv_link VARCHAR(150) DEFAULT NULL,

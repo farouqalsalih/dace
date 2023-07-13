@@ -11,14 +11,6 @@ use std::collections::HashMap;
 use std::sync::Arc;
 use std::{env, time::Duration, time::Instant};
 
-fn duration_to_string(duration: Duration) -> String {
-    let total_seconds = duration.as_secs();
-    let hours = total_seconds / 3600;
-    let minutes = (total_seconds % 3600) / 60;
-    let seconds = total_seconds % 60;
-
-    format!("{} hours, {} minutes, {} seconds", hours, minutes, seconds)
-}
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -34,7 +26,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let hash_code = &args[4]; //1.0 for now
     let argdata = &args[5];
     let skip = &args[6]; //typically should be no
-    let _data_collection = &args[7]; //choose both
                                      // println!("{}", lru_mode);
                                      // println!("{}", t_mode);
                                      // println!("{}", creator);
@@ -139,8 +130,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         ),
         _ => trace(&mut loop_code, LRUSplay::<usize>::new()),
     };
-
-    let time_elapsed = start.elapsed();
 
     let hist_vec = result.0.to_vec();
 
@@ -327,13 +316,15 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         handle.await??; // Use '?' if the functions return Result<_, _>
     }
 
+    let time_elapsed = start.elapsed();
+
     aws_utilities::rds::save_entry(
         &mut conn,
         (
             t_mode,
             lru_mode,
             argdata,
-            &duration_to_string(time_elapsed),
+            time_elapsed.as_secs(),
             &trace_path_csv,
             &hist_rd_path_csv,
             // &hist_ri_path_csv,

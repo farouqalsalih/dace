@@ -54,7 +54,7 @@ pub fn save_entry(
         &String,
         &String,
         &String,
-        &String,
+        u64,
         &str,
         &str,
         &str,
