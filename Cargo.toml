@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
+    "check",
     "dace",
     "dace_tests",
     "stack_alg_sim",
